@@ -2,6 +2,9 @@
 Find kth largest element in a list using quick selection algorithm
 """
 
+# Worst case time complexity: O(n^2)
+# Average case time complexity: O(n)
+
 
 class Solution:
     def findKthLargest(self, nums: list[int], k: int) -> int:
@@ -18,6 +21,7 @@ class Solution:
         less_than_pivot = []
         same_as_pivot = []
         larger_than_pivot = []
+        # O(n)
         for element in nums:
             if element > pivot:
                 larger_than_pivot.append(element)
